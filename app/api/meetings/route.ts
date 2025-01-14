@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 export async function GET() {
   try {
     const response = await fetch(
-      `https://api.hubapi.com/crm/v3/objects/meetings?properties=hs_meeting_title,hs_meeting_start_time,hs_meeting_end_time,hubspot_owner_id`,
+      `https://api.hubapi.com/crm/v3/objects/meetings?properties=hs_meeting_title,hs_meeting_start_time,hs_meeting_end_time,hubspot_owner_id&archived=false`,
       {
         headers: {
           Authorization: `Bearer ${process.env.NEXT_PUBLIC_HUBSPOT_API_KEY}`,
